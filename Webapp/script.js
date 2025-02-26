@@ -93,7 +93,7 @@ async function sendMessage() {
 }
 
 async function fetchGeminiResponse(systemPrompt, userMessage) {
-    const endpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+    const endpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
     
     // Updated payload structure according to Gemini API requirements
     const payload = {
