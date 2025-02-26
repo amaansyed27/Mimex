@@ -19,8 +19,7 @@ Check out the live version of Mimex at [mimex.vercel.app](https://mimex.vercel.a
 
 ## 📱 Coming Soon
 
-- **Android App**: Native Android application with the same features
-- **Kotlin Implementation**: Backend rewritten in Kotlin for better performance
+- **Android App**: Native Android application (Kotlin and Compose) with the same features
 - **KMP (Kotlin Multiplatform)**: Cross-platform support for iOS, desktop, and more
 
 ## 💻 Usage
