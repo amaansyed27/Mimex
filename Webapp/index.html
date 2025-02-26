@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.0/marked.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- API Key Modal -->
+        <div id="apiKeyModal" class="modal">
+            <div class="modal-content">
+                <h2>Welcome to AI Chat</h2>
+                <p>Please enter your Gemini API key to continue</p>
+                <input type="password" id="apiKeyInput" placeholder="Enter your Gemini API key">
+                <button onclick="saveApiKey()">Save Key</button>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <h3>Chat Settings</h3>
+            <div class="personality-selector">
+                <label>Select AI Personality:</label>
+                <select id="personalitySelect">
+                    <option value="default">Default Assistant</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="coder">Coding Assistant</option>
+                    <option value="therapist">Therapist</option>
+                </select>
+            </div>
+            <div class="custom-prompt">
+                <label>Custom System Prompt:</label>
+                <textarea id="customPrompt" placeholder="Enter custom instructions for the AI..."></textarea>
+            </div>
+            <button onclick="updateSettings()">Update Settings</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be inserted here -->
+            </div>
+            <div class="chat-input-container">
+                <textarea id="userInput" placeholder="Type your message..."></textarea>
+                <button onclick="sendMessage()" class="send-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.0.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
